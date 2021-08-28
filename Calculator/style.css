@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #40484e;
+}
+
+h1 {
+  text-align: center;
+  color: aliceblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+h2 {
+  text-align: center;
+  color: aliceblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3vh;
+}
+
+h3 {
+  text-align: center;
+  color: aliceblue;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 3vh;
+}
+
+.compute {
+  margin-left: auto;
+  margin-right: auto;
+  display: table;
+  padding: 5px;
+  border: 2px solid white;
+}
