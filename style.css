@@ -26,6 +26,10 @@ h3 {
   font-size: 3vh;
 }
 
+#btn {
+  text-align: center;
+}
+
 .compute {
   margin-left: auto;
   margin-right: auto;
