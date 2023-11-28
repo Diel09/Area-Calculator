@@ -1,34 +1,48 @@
-const express = require('express');
-const serverless = require('serverless-http');
+// functions/app.js
 
-const app = express();
-
-app.use(express.json());
-
-app.post('/square', (req, res) => {
-  const side = parseFloat(req.body.side);
-  const area = Math.pow(side, 2);
-  res.json({ shape: 'square', area });
-});
-
-app.post('/rectangle', (req, res) => {
-  const length = parseFloat(req.body.length);
-  const width = parseFloat(req.body.width);
-  const area = length * width;
-  res.json({ shape: 'rectangle', area });
-});
-
-app.post('/circle', (req, res) => {
-  const radius = parseFloat(req.body.radius);
-  const area = Math.PI * Math.pow(radius, 2);
-  res.json({ shape: 'circle', area });
-});
-
-app.post('/triangle', (req, res) => {
-  const base = parseFloat(req.body.base);
-  const height = parseFloat(req.body.height);
-  const area = 0.5 * base * height;
-  res.json({ shape: 'triangle', area });
-});
-
-module.exports.handler = serverless(app);
+exports.handler = async function (event, context) {
+    const { shape, dimensions } = JSON.parse(event.body);
+  
+    let area;
+    switch (shape) {
+      case 'square':
+        area = calculateSquareArea(dimensions);
+        break;
+      case 'rectangle':
+        area = calculateRectangleArea(dimensions);
+        break;
+      case 'circle':
+        area = calculateCircleArea(dimensions);
+        break;
+      case 'triangle':
+        area = calculateTriangleArea(dimensions);
+        break;
+      default:
+        return {
+          statusCode: 400,
+          body: JSON.stringify({ error: 'Invalid shape provided' }),
+        };
+    }
+  
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ shape, area }),
+    };
+};
+  
+  function calculateSquareArea({ side }) {
+    return side * side;
+  }
+  
+  function calculateRectangleArea({ length, width }) {
+    return length * width;
+  }
+  
+  function calculateCircleArea({ radius }) {
+    return Math.PI * Math.pow(radius, 2);
+  }
+  
+  function calculateTriangleArea({ base, height }) {
+    return 0.5 * base * height;
+  }
+  
