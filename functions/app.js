@@ -1,4 +1,5 @@
 const express = require('express');
+const serverless = require('serverless-http'); // Import the serverless-http module
 const app = express();
 const port = process.env.PORT || 3000;
 
@@ -34,6 +35,8 @@ app.post('/.netlify/functions/triangle', (req, res) => {
     res.json({ shape: 'triangle', area });
 });
 
-// Export the Express app and the handler separately
+// Wrap the Express app with serverless-http
+exports.handler = serverless(app);
+
+// Export the Express app (useful for local testing)
 exports.app = app;
-exports.handler = serverless(app, { binary: ['*/*'] });
