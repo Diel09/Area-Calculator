@@ -1,0 +1,23 @@
+{
+  "name": "areacalculator",
+  "version": "1.0.0",
+  "description": "<!-- Improved compatibility of back to top link: See: https://github.com/Diel09/Area-Calculator --> <a name=\"readme-top\"></a>",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Diel09/Area-Calculator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Diel09/Area-Calculator/issues"
+  },
+  "homepage": "https://github.com/Diel09/Area-Calculator#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
