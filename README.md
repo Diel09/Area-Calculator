@@ -9,6 +9,7 @@
   <a href="https://github.com/Diel09/Area-Calculator">
     <img src="images/logo.png" alt="Logo" width="80" height="80">
   </a>
+</div>
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
