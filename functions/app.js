@@ -1,6 +1,21 @@
-// functions/app.js
+// functions/area.js
 
 exports.handler = async function (event, context) {
+    // Allow requests from any origin
+    const headers = {
+      'Access-Control-Allow-Origin': '*',
+      'Access-Control-Allow-Headers': 'Content-Type',
+      'Access-Control-Allow-Methods': 'POST',
+    };
+  
+    if (event.httpMethod !== 'POST') {
+      return {
+        statusCode: 405,
+        headers,
+        body: JSON.stringify({ error: 'Method Not Allowed' }),
+      };
+    }
+  
     const { shape, dimensions } = JSON.parse(event.body);
   
     let area;
@@ -20,15 +35,17 @@ exports.handler = async function (event, context) {
       default:
         return {
           statusCode: 400,
+          headers,
           body: JSON.stringify({ error: 'Invalid shape provided' }),
         };
     }
   
     return {
       statusCode: 200,
+      headers,
       body: JSON.stringify({ shape, area }),
     };
-};
+  };
   
   function calculateSquareArea({ side }) {
     return side * side;
