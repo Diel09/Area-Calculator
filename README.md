@@ -19,26 +19,42 @@ This project is to calculate the area of basic geometric shapes, including recta
 
 <!-- API Endpoints -->
 ## API Endpoints
+
+To use the API Endpoints you must request and HTTP Post request method with a payload depending on the shape
 ### Square
 
-API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/square/{side}
-Remove the curly bracket and change the value of 'side' to an integer;
+API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/square <br />
+JSON payload: {"side": 5} <br />
+Sample JSON response: 
+{
+  "shape": "square",
+  "area": 25
+}
 
 ### Rectangle
 
-API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/rectangle/{length}/{width}
-Remove the curly bracket and change the value of 'length' and 'width' to an integer;
+API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/rectangle <br />
+JSON payload: {"length": 5, "width": 3}
+Sample JSON response: 
+{
+  "shape": "rectangle",
+  "area": 15
+}
 
 ### Circle
 
-API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/circle/{radius}
-Remove the curly bracket and change the value of 'radius' to an integer;
+API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/circle
+JSON payload: {"radius": 4}
+Sample JSON response: 
+{
+  "shape": "triangle",
+  "area": 24
+}
 
 ### Triangle
 
-API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/triangle/{base}/{height}
-Remove the curly bracket and change the value of 'base' and 'height' to an integer;
-
-### Sample Response
+API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/triangle
+JSON payload: {"base": 5, "height": 8}
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">--- Eliezer lng malakas ---</a>)</p>
