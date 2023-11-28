@@ -7,7 +7,14 @@ exports.handler = async function (event, context) {
       'Access-Control-Allow-Headers': 'Content-Type',
       'Access-Control-Allow-Methods': 'POST, OPTIONS',
     };
-  
+    
+    if (event.httpMethod === 'OPTIONS') {
+        return {
+          statusCode: 200,
+          headers,
+          body: '',
+        };
+    }
     if (event.httpMethod !== 'POST') {
       return {
         statusCode: 405,
@@ -15,14 +22,6 @@ exports.handler = async function (event, context) {
         body: JSON.stringify({ error: 'Method Not Allowed' }),
       };
     }
-
-    if (event.httpMethod === 'OPTIONS') {
-        return {
-          statusCode: 200,
-          headers,
-          body: '',
-        };
-      }
   
     const { shape, dimensions } = JSON.parse(event.body);
   
