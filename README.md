@@ -26,9 +26,13 @@ To use the API Endpoints you must request and HTTP Post request method with a pa
 
 API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/square <br />
 JSON payload: <br />
-{<br />
-  "side": 5 <br />
+{ <br />
+  "shape": "square", <br /> 
+  "dimensions": { <br />
+    "side": 5 <br />
+  } <br />
 } <br />
+
 Sample JSON response: <br />
 { <br />
   "shape": "square", <br />
@@ -38,11 +42,14 @@ Sample JSON response: <br />
 ### Rectangle
 
 API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/rectangle <br />
-JSON payload: 
-{<br />
-  "length": 5, <br />
-  "width": 3 <br />
-} <br />
+JSON payload: <br />
+{ <br />
+  "shape": "rectangle", <br />
+  "dimensions": { <br />
+    "length": 5, <br />
+    "width": 3 <br />
+  } <br />
+} <br /> 
 Sample JSON response:  <br />
 { <br />
   "shape": "rectangle", <br />
@@ -54,21 +61,27 @@ Sample JSON response:  <br />
 API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/circle
 JSON payload:  <br />
 { <br />
-  "radius": 4 <br />
+  "shape": "circle", <br />
+  "dimensions": { <br /> 
+    "radius": 5 <br />
+  } <br />
 } <br />
 Sample JSON response: <br />
 { <br />
-  "shape": "triangle", <br />
+  "shape": "circle", <br />
   "area": 24 <br />
 } <br />
 
 ### Triangle
 
 API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/triangle
-JSON payload: 
+JSON payload:  <br />
 { <br />
-  "base": 5, <br />
-  "height": 8 <br />
+  "shape": "triangle", <br />
+  "dimensions": { <br />
+    "base": 5, <br />
+    "height": 5, <br />
+  } <br />
 } <br />
 Sample JSON Response: <br />
 { <br />
