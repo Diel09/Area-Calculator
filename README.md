@@ -24,7 +24,7 @@ This project is to calculate the area of basic geometric shapes, including recta
 To use the API Endpoints you must request and HTTP Post request method with a payload depending on the shape
 ### Square
 
-API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/square <br />
+API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app <br />
 JSON payload: <br />
 { <br />
   "shape": "square", <br /> 
@@ -41,7 +41,7 @@ Sample JSON response: <br />
 
 ### Rectangle
 
-API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/rectangle <br />
+API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app <br />
 JSON payload: <br />
 { <br />
   "shape": "rectangle", <br />
@@ -58,7 +58,7 @@ Sample JSON response:  <br />
 
 ### Circle
 
-API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/circle
+API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app
 JSON payload:  <br />
 { <br />
   "shape": "circle", <br />
@@ -74,7 +74,7 @@ Sample JSON response: <br />
 
 ### Triangle
 
-API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app/triangle
+API endpoint: https://basic-area-calculator.netlify.app/.netlify/functions/app
 JSON payload:  <br />
 { <br />
   "shape": "triangle", <br />
