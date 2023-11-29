@@ -15,7 +15,7 @@
 ## About The Project
 
 This project is to calculate the area of basic geometric shapes, including rectangle, square, circle, and triangle. This project also provides API endpoints available for use
-This can be access using this url: <a href="(https://basic-area-calculator.netlify.app)">Area Calculator</a>
+This can be access using this url: <a href="https://basic-area-calculator.netlify.app">Area Calculator</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- API Endpoints -->
